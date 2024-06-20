@@ -74,10 +74,9 @@ class MotorListrikController extends Controller
                 'data_kriteria.nama AS nama_kriteria',
                 DB::raw("CASE
                     WHEN data_kriteria.jenis = 'Cost' THEN
-                    ROUND((nilai_maksimal_kriteria - nilai) / (nilai_maksimal_kriteria - nilai_minimal_kriteria)::decimal, 5)
+                    ROUND((max_values.nilai_maksimal_kriteria - data_penilaian.nilai) / (max_values.nilai_maksimal_kriteria - max_values.nilai_minimal_kriteria), 5)
                     WHEN data_kriteria.jenis = 'Benefit' THEN
-                    ROUND((nilai - nilai_minimal_kriteria)/(nilai_maksimal_kriteria - nilai_minimal_kriteria)::decimal, 5)
-                    
+                    ROUND((data_penilaian.nilai - max_values.nilai_minimal_kriteria) / (max_values.nilai_maksimal_kriteria - max_values.nilai_minimal_kriteria), 5)
                     ELSE
                         NULL
                 END AS nilai_ternormalisasi")
@@ -91,6 +90,7 @@ class MotorListrikController extends Controller
                 'max_values.id_kriteria'
             )
             ->get();
+
 
         // tes hasil result
         //print_r($results[2]);
