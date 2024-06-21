@@ -3,14 +3,14 @@
     <ul id="navbarItems"
         class="md:flex md:items-center z-[1] md:z-auto md:static absolute bg-[#436850] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-200 text-white">
         <li class="mx-4 my-6 md:my-0"><a href="{{ route('index-page') }}#spesifikasi"
-                class="text-xl duration-500 hover:text-[#BFF6C3] hover:underline"><i class="fa-solid fa-circle-info"></i>
+                class="text-xl duration-500 hover:text-yellow-200 hover:underline"><i class="fa-solid fa-circle-info"></i>
                 Spesifikasi</a></li>
         <li class="mx-4 my-6 md:my-0"><a href="{{ route('index-page') }}#rekomendasi"
-                class="text-xl hover:text-[#BFF6C3] duration-500 hover:underline"><i class="fa-solid fa-gear"></i>
+                class="text-xl hover:text-yellow-200 duration-500 hover:underline"><i class="fa-solid fa-gear"></i>
                 Rekomendasi</a>
         </li>
         <li class="mx-4 my-6 md:my-0"><a href="{{ route('index-page') }}#motor-listrik"
-                class="text-xl hover:text-[#BFF6C3] duration-500 hover:underline"><i class="fa-solid fa-list"></i> Daftar
+                class="text-xl hover:text-yellow-200 duration-500 hover:underline"><i class="fa-solid fa-list"></i> Daftar
                 Molis</a></li>
     </ul>
 @endsection
@@ -18,7 +18,7 @@
     <section id="motor-listrik" class="container-fluid xl:container xl:mx-auto my-4 bg-white rounded-lg">
         <div class="p-6 container-fluid">
             <div class="flex justify-between">
-                <h1 class="font-bold text-3xl">Rekomendasi Motor Listrik</h1>
+                <h1 class="font-bold text-2xl ">Rekomendasi Motor Listrik Pertama</h1>
             </div>
             <div class="container-fluid my-4">
                 <div class="flex justify-around flex-col sm:flex-row md:gap-5">
@@ -28,6 +28,12 @@
                         <h2 class="font-bold text-2xl my-2">{{ $rekomendasi[0]->alternatif->nama }}</h2>
                         <div class="flex flex-wrap justify-between align-items-center">
                             <table class="table table-zebra">
+                                <tr>
+                                    <th class="md:text-[16px] lg:text-[18px]">
+                                        Skor</th>
+                                    <td class="md:text-[16px] lg:text-[18px]">
+                                        {{ $score[$rekomendasi[0]->alternatif->nama] }}</td>
+                                </tr>
                                 @foreach ($rekomendasi as $item)
                                     <tr>
                                         <th class="md:text-[16px] lg:text-[18px]">
@@ -48,22 +54,28 @@
     <section id="motor-listrik" class="container-fluid xl:container xl:mx-auto my-4 bg-white rounded-lg">
         <div class="p-6 container-fluid">
             <div class="flex justify-between">
-                <h1 class="font-bold text-3xl">Rekomendasi Alternatif</h1>
+                <h1 class="font-bold text-2xl">Rekomendasi Motor Listrik Kedua</h1>
             </div>
-            <div class="container-fluid my-4 xl:flex xl:justify-around">
-                <div class="flex justify-around flex-col sm:flex-row md:gap-5 items-center">
+            <div class="container-fluid my-4">
+                <div class="flex justify-around flex-col sm:flex-row md:gap-5">
                     <img src="{{ asset('storage/images/' . $alternatif1[0]->alternatif->gambar) }}" alt="motor listrik"
-                        class="img-thumbnail md:w-[40%] lg:max-w-[300px] h-auto">
+                        class="img-thumbnail md:w-[40%] lg:max-w-[400px] h-auto">
                     <div class="w-full md:w-1/2">
                         <h2 class="font-bold text-2xl my-2">{{ $alternatif1[0]->alternatif->nama }}</h2>
                         <div class="flex flex-wrap justify-between align-items-center">
                             <table class="table table-zebra">
+                                <tr>
+                                    <th class="md:text-[16px] lg:text-[18px]">
+                                        Skor</th>
+                                    <td class="md:text-[16px] lg:text-[18px]">
+                                        {{ $score[$alternatif1[0]->alternatif->nama] }}</td>
+                                </tr>
                                 @foreach ($alternatif1 as $item)
                                     <tr>
-                                        <th class="lg:text-[16px] ">
-                                            {{ str_replace('_', ' ', $item->kriteria->nama) }}
-                                        </th>
-                                        <td class="lg:text-[16px]">{{ number_format($item->nilai, 0, ',', '.') }}
+                                        <th class="md:text-[16px] lg:text-[18px]">
+                                            {{ str_replace('_', ' ', $item->kriteria->nama) }}</th>
+                                        <td class="md:text-[16px] lg:text-[18px]">
+                                            {{ number_format($item->nilai, 0, ',', '.') }}
                                             {{ $item->kriteria->satuan }}</td>
                                     </tr>
                                 @endforeach
@@ -71,19 +83,35 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-around flex-col sm:flex-row md:gap-5 items-center">
+            </div>
+        </div>
+    </section>
+
+    <section id="motor-listrik" class="container-fluid xl:container xl:mx-auto my-4 bg-white rounded-lg">
+        <div class="p-6 container-fluid">
+            <div class="flex justify-between">
+                <h1 class="font-bold text-2xl">Rekomendasi Motor Listrik Ketiga</h1>
+            </div>
+            <div class="container-fluid my-4">
+                <div class="flex justify-around flex-col sm:flex-row md:gap-5">
                     <img src="{{ asset('storage/images/' . $alternatif2[0]->alternatif->gambar) }}" alt="motor listrik"
-                        class="img-thumbnail md:w-[40%] lg:max-w-[300px] h-auto">
+                        class="img-thumbnail md:w-[40%] lg:max-w-[400px] h-auto">
                     <div class="w-full md:w-1/2">
                         <h2 class="font-bold text-2xl my-2">{{ $alternatif2[0]->alternatif->nama }}</h2>
                         <div class="flex flex-wrap justify-between align-items-center">
                             <table class="table table-zebra">
+                                <tr>
+                                    <th class="md:text-[16px] lg:text-[18px]">
+                                        Skor</th>
+                                    <td class="md:text-[16px] lg:text-[18px]">
+                                        {{ $score[$alternatif2[0]->alternatif->nama] }}</td>
+                                </tr>
                                 @foreach ($alternatif2 as $item)
                                     <tr>
-                                        <th class="lg:text-[16px]">
-                                            {{ str_replace('_', ' ', $item->kriteria->nama) }}
-                                        </th>
-                                        <td class="lg:text-[16px]">{{ number_format($item->nilai, 0, ',', '.') }}
+                                        <th class="md:text-[16px] lg:text-[18px]">
+                                            {{ str_replace('_', ' ', $item->kriteria->nama) }}</th>
+                                        <td class="md:text-[16px] lg:text-[18px]">
+                                            {{ number_format($item->nilai, 0, ',', '.') }}
                                             {{ $item->kriteria->satuan }}</td>
                                     </tr>
                                 @endforeach

@@ -12,16 +12,20 @@
     <link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}"> <!-- Untuk ikon PNG -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
 </head>
 
-<body class="bg-base-200">
+<body class="bg-base-200 font-[roboto]">
     <header>
         <nav class="p-5 bg-[#436850] shadow md:flex md:justify-between md:items-center">
             <div class="flex justify-between items-center text-white">
-                <a href="{{ route('index-page') }}">
-                    <span class="text-2xl cursor-pointer font-[Poppins] font-semibold">
-                        SIMOLIS
-                    </span>
+                <a href="{{ route('index-page') }}" class="flex items-center">
+                    <img src="{{ asset('favicon.png') }}" alt="logo" width="50">
+                    <span class="text-3xl cursor-pointer font-[pacifico]">
+                        <span class="text-yellow-300">Si</span>mol<span class="text-yellow-300">is</span> </span>
                 </a>
                 <span class="text-3xl cursor-pointer md:hidden block mx-2">
                     <i class="fa-solid fa-bars" class="menu" onclick="Menu(this)"></i>
@@ -39,15 +43,14 @@
 
 
     <footer class="bg-[#436850] p-5 text-center">
-        <p class="text-[16px] lg:text-[20px] font-[Poppins] text-white">Politeknik Negeri Jakarta - 2024</p>
+        <p class="text-[16px] lg:text-[20px] font-[Poppins] text-white">Gilang Adhi @ Politeknik Negeri Jakarta - 2024
+        </p>
     </footer>
 
     <script src="https://kit.fontawesome.com/3cfd8eaa87.js" crossorigin="anonymous"></script>
     <script src="{{ asset('/sw.js') }}"></script>
     <script>
         if ("serviceWorker" in navigator) {
-            // Register a service worker hosted at the root of the
-            // site using the default scope.
             navigator.serviceWorker.register("/sw.js").then(
                 (registration) => {
                     console.log("Service worker registration succeeded:", registration);

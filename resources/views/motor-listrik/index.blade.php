@@ -3,14 +3,14 @@
     <ul id="navbarItems"
         class="md:flex md:items-center z-[1] md:z-auto md:static absolute bg-[#436850] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-200 text-white">
         <li class="mx-4 my-6 md:my-0"><a href="{{ route('index-page') }}#spesifikasi"
-                class="text-xl duration-500 hover:text-[#BFF6C3] hover:underline"><i class="fa-solid fa-circle-info"></i>
+                class="text-xl duration-500 hover:text-yellow-200 hover:underline"><i class="fa-solid fa-circle-info"></i>
                 Spesifikasi</a></li>
         <li class="mx-4 my-6 md:my-0"><a href="{{ route('index-page') }}#rekomendasi"
-                class="text-xl hover:text-[#BFF6C3] duration-500 hover:underline"><i class="fa-solid fa-gear"></i>
+                class="text-xl hover:text-yellow-200 duration-500 hover:underline"><i class="fa-solid fa-gear"></i>
                 Rekomendasi</a>
         </li>
         <li class="mx-4 my-6 md:my-0"><a href="{{ route('index-page') }}#motor-listrik"
-                class="text-xl hover:text-[#BFF6C3] duration-500 hover:underline"><i class="fa-solid fa-list"></i> Daftar
+                class="text-xl hover:text-yellow-200 duration-500 hover:underline"><i class="fa-solid fa-list"></i> Daftar
                 Molis</a></li>
     </ul>
 @endsection

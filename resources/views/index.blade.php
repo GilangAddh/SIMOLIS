@@ -3,13 +3,13 @@
     <ul id="navbarItems"
         class="md:flex md:items-center z-[1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-200 text-white bg-[#436850]">
         <li class="mx-4 my-6 md:my-0"><a href="#spesifikasi"
-                class="text-xl hover:text-[#BFF6C3] hover:underline duration-100"><i class="fa-solid fa-circle-info"></i>
+                class="text-xl hover:text-yellow-200 hover:underline duration-100"><i class="fa-solid fa-circle-info"></i>
                 Spesifikasi</a></li>
         <li class="mx-4 my-6 md:my-0"><a href="#rekomendasi"
-                class="text-xl hover:text-[#BFF6C3] hover:underline duration-100"><i class="fa-solid fa-gear"></i>
+                class="text-xl hover:text-yellow-200 hover:underline duration-100"><i class="fa-solid fa-gear"></i>
                 Rekomendasi</a></li>
         <li class="mx-4 my-6 md:my-0"><a href="#motor-listrik"
-                class="text-xl hover:text-[#BFF6C3] hover:underline duration-100"><i class="fa-solid fa-list"></i> Daftar
+                class="text-xl hover:text-yellow-200 hover:underline duration-100"><i class="fa-solid fa-list"></i> Daftar
                 Molis</a></li>
     </ul>
 @endsection
@@ -37,98 +37,108 @@
         <div class="p-6">
             <h1 class="font-bold text-2xl">Apa Saja Spesifikasi Motor Listrik?</h1>
             <div class="p-4 bg-base-200 rounded-xl my-3">
-                <div class="md:p-2 md:flex items-top">
-                    <div class="my-4 md:my2 md:max-w-[50%]  px-4">
-                        <h2 class="text-lg font-bold">Harga</h2>
-                        <p class="text-justify xl:text-[18px]">Harga adalah kriteria yang sangat penting dalam keputusan
-                            pembelian motor listrik, karena mempengaruhi secara signifikan ketersediaan dan fitur yang dapat
-                            dimiliki. Dalam sistem ini, kriteria harga dibagi menjadi enam poin untuk memudahkan pemilihan.
-                            Motor listrik dikategorikan sebagai Sangat Mahal jika harganya lebih dari 26 juta, Mahal untuk
-                            rentang harga antara 22 juta hingga 26 juta, Sedang untuk harga antara 18 juta hingga 22 juta,
-                            Murah untuk rentang harga 14 juta hingga 18 juta, Sangat Murah untuk motor dengan harga kurang
-                            dari 14 juta, dan Tidak dipilih jika harga tidak menjadi faktor pertimbangan dalam pemilihan
-                            motor.</p>
+                <div class="md:p-2 md:flex items-top 2xl:justify-around">
+                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4">
+                        <h2 class="text-xl font-bold">Harga</h2>
+                        <ul class="pl-5 xl:text-[18px] list-disc">
+                            <li><strong>Sangat Mahal</strong>: Harga lebih dari 26 juta.</li>
+                            <li><strong>Mahal</strong>: Harga antara 22 juta hingga 26 juta.</li>
+                            <li><strong>Sedang</strong>: Harga antara 18 juta hingga 22 juta.</li>
+                            <li><strong>Murah</strong>: Harga antara 14 juta hingga 18 juta.</li>
+                            <li><strong>Sangat Murah</strong>: Harga kurang dari 14 juta.</li>
+                            <li><strong>Tidak dipilih</strong>: Harga tidak menjadi faktor pertimbangan dalam pemilihan
+                                motor.</li>
+                        </ul>
                     </div>
-                    <div class="my-4 md:my2 md:max-w-[50%]  px-4">
-                        <h2 class="text-lg font-bold">Kecepatan Maksimal</h2>
-                        <p class="text-justify xl:text-[18px]">Kecepatan maksimal pada motor listrik adalah titik tertinggi
-                            dari kecepatan yang dapat dicapai oleh motor tersebut. Dalam sistem ini, kecepatan maksimal
-                            dibagi menjadi lima poin untuk memudahkan penilaian. Motor listrik dianggap Sangat Cepat jika
-                            kecepatan maksimalnya lebih dari 80 km/h, Cepat untuk kecepatan antara 80 km/h sampai 65 km/h,
-                            Sedang untuk kecepatan antara 65 km/h sampai 50 km/h, Pelan untuk kecepatan antara 50 km/h
-                            sampai 40 km/h, dan Tidak Dipilih jika kecepatan maksimal tidak menjadi faktor pertimbangan
-                            dalam pemilihan.
+                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px]  px-4">
+                        <h2 class="text-xl font-bold">Kecepatan Maksimal</h2>
+                        <ul class="pl-5 xl:text-[18px] list-disc">
+                            <li><strong>Sangat Cepat</strong>: Kecepatan maksimal lebih dari 80 km/h.</li>
+                            <li><strong>Cepat</strong>: Kecepatan antara 80 km/h sampai 65 km/h.</li>
+                            <li><strong>Sedang</strong>: Kecepatan antara 65 km/h sampai 50 km/h.</li>
+                            <li><strong>Pelan</strong>: Kecepatan antara 50 km/h sampai 40 km/h.</li>
+                            <li><strong>Tidak Dipilih</strong>: Kecepatan maksimal tidak menjadi faktor pertimbangan dalam
+                                pemilihan.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:p-2 md:flex items-top 2xl:justify-around">
+                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px]  px-4">
+                        <h2 class="text-xl font-bold">Jarak Tempuh</h2>
+                        <ul class="pl-5 xl:text-[18px] list-disc">
+                            <li><strong>Sangat Jauh</strong>:Jarak tempuh lebih dari 100 km.
+                            </li>
+                            <li><strong>Jauh</strong>: Jarak tempuh antara 80 km sampai 100 km.</li>
+                            <li><strong>Sedang</strong>: Jarak tempuh antara 60 km sampai 80 km.</li>
+                            <li><strong>Dekat</strong>: Jarak tempuh di bawah 60 km.</li>
+                            <li><strong>Tidak Dipilih</strong>: Jarak tempuh tidak menjadi faktor pertimbangan dalam
+                                pemilihan.</li>
+                        </ul>
 
+                    </div>
+                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px]  px-4">
+                        <h2 class="text-xl font-bold">Daya Dinamo</h2>
+                        <ul class="pl-5 xl:text-[18px] list-disc">
+                            <li><strong>Sangat Besar</strong>: Daya lebih dari 2500 watt.</li>
+                            <li><strong>Besar</strong>: Daya antara 2000 hingga 2500 watt.</li>
+                            <li><strong>Sedang</strong>: Daya antara 1500 hingga 2000 watt.</li>
+                            <li><strong>Kecil</strong>: Daya antara 1000 hingga 1500 watt.</li>
+                            <li><strong>Sangat Kecil</strong>: Daya kurang dari 1000 watt.</li>
+                            <li><strong>Tidak Dipilih</strong>: Daya dinamo tidak menjadi faktor pertimbangan dalam
+                                pemilihan.</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="md:p-2 md:flex items-top 2xl:justify-around">
+                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4">
+                        <h2 class="text-xl font-bold">Kapasitas Baterai</h2>
+                        <p class="text-justify xl:text-[18px]">
+                        <ul class="pl-5 xl:text-[18px] list-disc">
+                            <li><strong>Sangat Besar</strong>: Kapasitas lebih dari 2000 watt/jam (Wh).</li>
+                            <li><strong>Besar</strong>: Kapasitas antara 1500 hingga 2000 watt/jam (Wh).</li>
+                            <li><strong>Sedang</strong>: Kapasitas antara 1000 hingga 1500 watt/jam (Wh).</li>
+                            <li><strong>Kecil</strong>: Kapasitas antara 500 hingga 1000 watt/jam (Wh).</li>
+                            <li><strong>Sangat Kecil</strong>: Kapasitas kurang dari 500 watt/jam (Wh).</li>
+                            <li><strong>Tidak Dipilih</strong>: Kapasitas baterai tidak menjadi pertimbangan dalam
+                                pemilihan.</li>
+                        </ul>
                         </p>
                     </div>
-                </div>
-                <div class="md:p-2 md:flex items-top">
-                    <div class="my-4 md:my2 md:max-w-[50%]  px-4">
-                        <h2 class="text-lg font-bold">Jarak Tempuh</h2>
-                        <p class="text-justify xl:text-[18px]">Jarak tempuh pada motor listrik adalah ukuran kemampuan motor
-                            untuk melakukan perjalanan dalam satu kali pengisian daya. Dalam sistem ini, jarak tempuh dibagi
-                            menjadi lima poin untuk mempermudah evaluasi. Motor listrik dikategorikan sebagai Sangat Jauh
-                            jika mampu menempuh lebih dari 100 km dalam satu pengisian daya, Jauh untuk jarak tempuh antara
-                            80 km sampai 100 km, Sedang untuk jarak tempuh antara 60 km sampai 80 km, Dekat untuk jarak
-                            tempuh di bawah 60 km, dan Tidak Dipilih jika jarak tempuh tidak menjadi faktor pertimbangan
-                            dalam pemilihan.</p>
+                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4">
+                        <h2 class="text-xl font-bold">Lama Waktu Pengisian</h2>
+                        <ul class="pl-5 xl:text-[18px] list-disc">
+                            <li><strong>Sangat Cepat</strong>: Waktu pengisian kurang dari 1 jam.</li>
+                            <li><strong>Cepat</strong>: Waktu pengisian antara 1 hingga 2 jam.</li>
+                            <li><strong>Sedang</strong>: Waktu pengisian antara 2 hingga 4 jam.</li>
+                            <li><strong>Lambat</strong>: Waktu pengisian antara 4 hingga 6 jam.</li>
+                            <li><strong>Sangat Lambat</strong>: Waktu pengisian lebih dari 6 jam.</li>
+                            <li><strong>Tidak Dipilih</strong>: Lama pengisian tidak menjadi pertimbangan dalam pemilihan.
+                            </li>
+                        </ul>
                     </div>
+                </div>
+                <div class="md:p-2 md:flex items-top 2xl:justify-around">
+                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px]  px-4">
+                        <h2 class="text-xl font-bold">Daya Angkut</h2>
+                        <ul class="pl-5 xl:text-[18px] list-disc">
+                            <li><strong>Sangat Besar</strong>: Daya angkut lebih dari 200 kg.</li>
+                            <li><strong>Besar</strong>: Daya angkut antara 150 hingga 200 kg.</li>
+                            <li><strong>Sedang</strong>: Daya angkut antara 100 hingga 150 kg.</li>
+                            <li><strong>Kecil</strong>: Daya angkut di bawah 100 kg.</li>
+                            <li><strong>Tidak Dipilih</strong>: Daya angkut tidak menjadi pertimbangan dalam pemilihan.</li>
+                        </ul>
 
-                    <div class="my-4 md:my2 md:max-w-[50%]  px-4">
-                        <h2 class="text-lg font-bold">Daya Dinamo</h2>
-                        <p class="text-justify xl:text-[18px]">Daya dinamo pada motor listrik adalah ukuran tenaga yang
-                            dihasilkan untuk menggerakkan motor tersebut. Dalam sistem ini, daya dinamo dibagi menjadi enam
-                            poin untuk mempermudah evaluasi. Motor listrik diklasifikasikan sebagai sangat besar jika
-                            memiliki daya lebih dari 2500 watt, besar untuk daya antara 2000 hingga 2500 watt, sedang untuk
-                            daya antara 1500 hingga 2000 watt, kecil untuk daya antara 1000 hingga 1500 watt, sangat kecil
-                            untuk daya di bawah 1000 watt, dan Tidak Dipilih jika daya dinamo tidak menjadi faktor
-                            pertimbangan.</p>
                     </div>
-                </div>
-                <div class="md:p-2 md:flex items-center">
-                    <div class="my-4 md:my2 md:max-w-[50%]  px-4">
-                        <h2 class="text-lg font-bold">Kapasitas Baterai</h2>
-                        <p class="text-justify xl:text-[18px]">Kapasitas baterai adalah ukuran energi yang dapat disimpan
-                            dan disuplai oleh
-                            baterai untuk
-                            menggerakkan motor listrik. Pada sistem ini, kapasitas baterai dibagi menjadi enam kategori,
-                            yaitu sangat besar untuk kapasitas lebih dari 2000 watt-jam (Wh), besar untuk kapasitas antara
-                            1500 hingga 2000 watt-jam (Wh), sedang untuk kapasitas antara 1000 hingga 1500 watt-jam (Wh),
-                            kecil untuk kapasitas antara 500 hingga 1000 watt-jam (Wh), sangat kecil untuk kapasitas di
-                            bawah 500 watt-jam (Wh), dan tidak dipilih jika kapasitas baterai tidak menjadi pertimbangan
-                            dalam pemilihan.</p>
-                    </div>
-                    <div class="my-4 md:my2 md:max-w-[50%]  px-4">
-                        <h2 class="text-lg font-bold">Lama Charging</h2>
-                        <p class="text-justify xl:text-[18px]">Lama pengisian (charging) adalah waktu yang dibutuhkan untuk
-                            mengisi daya
-                            baterai hingga penuh. Pada sistem ini, lama pengisian baterai dibagi menjadi enam kategori,
-                            yaitu sangat cepat untuk waktu pengisian kurang dari 1 jam, cepat untuk waktu pengisian antara 1
-                            hingga 2 jam, sedang untuk waktu pengisian antara 2 hingga 4 jam, lambat untuk waktu pengisian
-                            antara 4 hingga 6 jam, sangat lambat untuk waktu pengisian lebih dari 6 jam, dan tidak dipilih
-                            jika lama pengisian tidak menjadi pertimbangan dalam pemilihan.</p>
-                    </div>
-                </div>
-                <div class="md:p-2 md:flex items-center">
-                    <div class="my-4 md:my2 md:max-w-[50%]  px-4">
-                        <h2 class="text-lg font-bold">Daya Angkut</h2>
-                        <p class="text-justify xl:text-[18px]">Daya angkut adalah kapasitas maksimum beban yang dapat
-                            diangkut oleh motor
-                            listrik atau kendaraan yang menggunakan motor tersebut. Pada sistem ini, daya angkut dibagi
-                            menjadi lima kategori, yaitu sangat besar untuk daya angkut lebih dari 200 kg, besar untuk daya
-                            angkut antara 150 hingga 200 kg, sedang untuk daya angkut antara 100 hingga 150 kg, kecil untuk
-                            daya angkut dibawah 100 kg dan tidak dipilih jika daya angkut tidak menjadi pertimbangan dalam
-                            pemilihan.</p>
-                    </div>
-                    <div class="my-4 md:my2 md:max-w-[50%]  px-4">
-                        <h2 class="text-lg font-bold">Garansi</h2>
-                        <p class="text-justify xl:text-[18px]">Garansi adalah jaminan yang diberikan oleh produsen atau
-                            penjual terhadap
-                            kualitas dan kinerja motor listrik atau komponen terkait selama periode tertentu. Pada sistem
-                            ini garansi yang menjadi tolak ukur adalah garansi baterai. Garansi dibagi menjadi empat
-                            kategori, yaitu jangka pendek untuk garansi kurang dari 6 bulan, standar untuk garansi antara 6
-                            bulan sampai 12 bulan, jangka panjang untuk garansi lebih dari 12 bulan, dan tidak dipilih jika
-                            garansi tidak menjadi pertimbangan dalam pemilihan.</p>
+                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4">
+                        <h2 class="text-xl font-bold">Garansi Baterai</h2>
+                        <ul class="pl-5 xl:text-[18px] list-disc">
+                            <li><strong>Jangka Pendek</strong>: Garansi kurang dari 6 bulan.</li>
+                            <li><strong>Standar</strong>: Garansi antara 6 bulan sampai 12 bulan.</li>
+                            <li><strong>Jangka Panjang</strong>: Garansi lebih dari 12 bulan.</li>
+                            <li><strong>Tidak Dipilih</strong>: Garansi tidak menjadi pertimbangan dalam pemilihan.</li>
+                        </ul>
+
                     </div>
                 </div>
             </div>

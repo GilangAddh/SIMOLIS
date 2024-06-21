@@ -137,6 +137,14 @@ class MotorListrikController extends Controller
         $alternatif1 = $sorted->skip(1)->first();
         $alternatif2 = $sorted->skip(2)->first();
 
+        $score = [];
+
+        for ($i = 0; $i <= 2; $i++) {
+            if (isset($sorted[$i])) {
+                $nama_alternatif = $sorted[$i]['nama_alternatif'];
+                $score[$nama_alternatif] = $sorted[$i]['total'];
+            }
+        }
 
         $dataRekom = $this->getDataRekom($rekomendasi['id_alternatif']);
         $dataAlter1 = $this->getDataRekom($alternatif1['id_alternatif']);
@@ -146,7 +154,8 @@ class MotorListrikController extends Controller
         return view('/rekomendasi/index', [
             "rekomendasi" => $dataRekom,
             "alternatif1" => $dataAlter1,
-            "alternatif2" => $dataAlter2
+            "alternatif2" => $dataAlter2,
+            "score" => $score
         ]);
     }
 
