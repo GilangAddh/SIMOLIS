@@ -21,6 +21,9 @@
                     <x-nav-link :href="route('data-kriteria-index')" :active="request()->routeIs('data-kriteria-index')">
                         {{ __('Data Kriteria') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('data-sub-index')" :active="request()->routeIs('data-sub-index')">
+                        {{ __('Data Sub Kriteria') }}
+                    </x-nav-link>
                 </div>
 
 
@@ -91,6 +94,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('data-kriteria-index')" :active="request()->routeIs('data-kriteria-index')">
                 {{ __('Data Kriteria') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('data-sub-index')" :active="request()->routeIs('data-sub-index')">
+                {{ __('Data Sub Kriteria') }}
             </x-responsive-nav-link>
         </div>
 
