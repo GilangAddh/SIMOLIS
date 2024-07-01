@@ -9,7 +9,7 @@ class DataAlternatif extends Model
 {
     use HasFactory;
     protected $table = 'data_alternatif';
-    protected $fillable = ['nama, gambar'];
+    protected $fillable = ['nama', 'gambar'];
 
     public function penilaian()
     {

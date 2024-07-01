@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                        <img src="{{ asset('favicon.png') }}" alt="" width="56">
                     </a>
                 </div>
 
@@ -15,7 +15,15 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('data-alternatif-index')" :active="request()->routeIs('data-alternatif-index')">
+                        {{ __('Data Alternatif') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('data-kriteria-index')" :active="request()->routeIs('data-kriteria-index')">
+                        {{ __('Data Kriteria') }}
+                    </x-nav-link>
                 </div>
+
+
             </div>
 
             <!-- Settings Dropdown -->
@@ -77,6 +85,12 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('data-alternatif-index')" :active="request()->routeIs('data-alternatif-index')">
+                {{ __('Data Alternatif') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('data-kriteria-index')" :active="request()->routeIs('data-kriteria-index')">
+                {{ __('Data Kriteria') }}
             </x-responsive-nav-link>
         </div>
 

@@ -32,18 +32,6 @@ class MotorListrikController extends Controller
         return view('/motor-listrik/index', ['molis' => $molis, 'grouped_data' => $grouped_data]);
     }
 
-    public function tes(Request $request)
-    {
-        $raw = $request->all();
-
-        if (isset($raw['_token'])) {
-            unset($raw['_token']);
-        }
-
-        // print_r($request->all());
-        return response()->json($request->all());
-    }
-
     public function getNormalizedScores(Request $request)
     {
         //ambil nilai post dan keluarkan token dan method

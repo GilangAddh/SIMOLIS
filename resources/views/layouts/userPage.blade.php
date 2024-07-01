@@ -62,6 +62,26 @@
         } else {
             console.error("Service workers are not supported.");
         }
+
+        function Menu(e) {
+            let navbarItems = document.querySelector("#navbarItems");
+            console.log(navbarItems);
+            if (e.classList.contains("fa-bars")) {
+                e.classList.remove("fa-bars");
+                e.classList.add("fa-xmark");
+                navbarItems.classList.remove("opacity-0");
+                navbarItems.classList.remove("top-[-400px]");
+                navbarItems.classList.add("top-[75px]");
+                navbarItems.classList.add("opacity-100");
+            } else {
+                e.classList.remove("fa-xmark");
+                e.classList.add("fa-bars");
+                navbarItems.classList.remove("top-[80px]");
+                navbarItems.classList.remove("opacity-100");
+                navbarItems.classList.add("opacity-0");
+                navbarItems.classList.add("top-[-400px]");
+            }
+        }
     </script>
     <script src="{{ asset('js/script.js') }}"></script>
 </body>
