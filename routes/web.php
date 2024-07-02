@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataAlternatifController;
 use App\Http\Controllers\DataKriteriaController;
+use App\Http\Controllers\DataPenilaianController;
 use App\Http\Controllers\DataSubKriteriaController;
 use App\Http\Controllers\MotorListrikController;
 use App\Http\Controllers\ProfileController;
@@ -47,6 +48,10 @@ Route::middleware('auth')->group(function () {
     Route::post('/data-sub-kriteria/store', [DataSubKriteriaController::class, 'store'])->name('data-sub-post');
     Route::put('/data-sub-kriteria/update/{id}', [DataSubKriteriaController::class, "update"])->name('data-sub-update');
     Route::delete('/data-sub-kriteria/delete/{id}', [DataSubKriteriaController::class, "delete"])->name('data-sub-delete');
+
+    Route::get('/data-penilaian', [DataPenilaianController::class, 'index'])->name('data-penilaian-index');
+    Route::post('/data-penilaian/store', [DataPenilaianController::class, 'store'])->name('data-sub-post');
+    Route::delete('/data-penilaian/delete/{id}', [DataPenilaianController::class, "delete"])->name('data-penilaian-delete');
 });
 
 require __DIR__ . '/auth.php';

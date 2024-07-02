@@ -11,8 +11,7 @@ class DataSubKriteriaController extends Controller
     public function index()
     {
         $dataKriteria = DataKriteria::with('subkriteria')->get();
-        $dataSub = DataSubKriteria::all();
-        return view('data-sub-kriteria/index', ['dataKriteria' => $dataKriteria, 'dataSub' => $dataSub]);
+        return view('data-sub-kriteria/index', ['dataKriteria' => $dataKriteria]);
     }
 
     public function store(Request $request)

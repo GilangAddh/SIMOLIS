@@ -58,7 +58,7 @@
                             <p class="text-white text-[28px] font-bold mb-6">{{ $jumlahPenilaian }}</p>
                         </div>
                         <div class="px-3 py-1 text-right border-t-[1px] text-white ">
-                            <a href="{{ route('data-sub-index') }}" class="text-sm text-center">Selengkapnya <i
+                            <a href="{{ route('data-penilaian-index') }}" class="text-sm text-center">Selengkapnya <i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
