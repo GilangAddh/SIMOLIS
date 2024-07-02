@@ -149,6 +149,9 @@
         <div class="p-6">
             <h1 class="font-bold text-2xl">Rekomendasi Motor Listrik</h1>
             <form action="{{ route('rekomendasi-molis') }}" method="POST">
+                <div class="my-2">
+                    <p class="text-red-600"><i>*Seluruh input wajib di isi</i></p>
+                </div>
                 @csrf
                 @method('post')
                 <div class="p-4 bg-base-200 rounded-xl my-3 md:flex flex-wrap justify-center items-center gap-5">
@@ -158,7 +161,7 @@
                                 class="font-bold lg:text-[20px]">{{ str_replace('_', ' ', $kriteria->nama) }}</label>
                             <div>
                                 <select class="select select-bordered w-full lg:text-[18px]" name="{{ $kriteria->nama }}"
-                                    id="{{ $kriteria->nama }}">
+                                    id="{{ $kriteria->nama }}" required>
                                     <option value="" selected disabled class="lg:text-[18px]">Pilih
                                         Subkriteria
                                     </option>

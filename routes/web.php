@@ -23,9 +23,12 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [MotorListrikController::class, 'index'])->name('index-page');
-Route::post('/rekomendasi', [MotorListrikController::class, 'getNormalizedScores'])->name('rekomendasi-molis');
-Route::get('/motor-listrik', [MotorListrikController::class, 'getAll'])->name('daftar-molis');
+Route::middleware(['guest'])->group(function () {
+    Route::get('/', [MotorListrikController::class, 'index'])->name('index-page');
+    Route::post('/rekomendasi', [MotorListrikController::class, 'getNormalizedScores'])->name('rekomendasi-molis');
+    Route::get('/motor-listrik', [MotorListrikController::class, 'getAll'])->name('daftar-molis');
+});
+
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 

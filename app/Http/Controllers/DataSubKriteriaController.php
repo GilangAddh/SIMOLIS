@@ -10,7 +10,9 @@ class DataSubKriteriaController extends Controller
 {
     public function index()
     {
-        $dataKriteria = DataKriteria::with('subkriteria')->get();
+        $dataKriteria = DataKriteria::with(['subkriteria' => function ($query) {
+            $query->orderBy('bobot');
+        }])->orderByDesc('id')->get();
         return view('data-sub-kriteria/index', ['dataKriteria' => $dataKriteria]);
     }
 

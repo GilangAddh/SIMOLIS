@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\DataAlternatif;
+use App\Models\DataPenilaian;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -10,7 +11,7 @@ class DataAlternatifController extends Controller
 {
     public function index()
     {
-        $data = DataAlternatif::paginate(10);
+        $data = DataAlternatif::orderByDesc('id')->paginate(10);
         return view('data-alternatif/index', ['dataAlternatif' => $data]);
     }
     public function store(Request $request)
@@ -63,6 +64,12 @@ class DataAlternatifController extends Controller
 
     public function delete($id)
     {
+        $dataPenilaian = DataPenilaian::where('id_alternatif', $id)->first();
+
+        if ($dataPenilaian) {
+            return back()->withErrors(['kombinasi' => 'Data Alternatif Digunakan Dalam Tabel Penilaian. Hapus Data Pada Tabel Penilaian Terlebih Dahulu'])->withInput();
+        }
+
         $dataAlternatif = DataAlternatif::findOrFail($id);
         Storage::delete('public/images/' . $dataAlternatif->gambar);
         $dataAlternatif->delete();

@@ -11,7 +11,7 @@ class DataPenilaianController extends Controller
 {
     public function index()
     {
-        $dataAlternatif = DataAlternatif::with('penilaian')->paginate(5);
+        $dataAlternatif = DataAlternatif::orderByDesc('id')->with('penilaian')->paginate(5);
         $dataKriteria = DataKriteria::all();
         return view('data-penilaian/index', ['dataAlternatif' => $dataAlternatif, 'dataKriteria' => $dataKriteria]);
     }

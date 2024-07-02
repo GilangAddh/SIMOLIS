@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\DataKriteria;
+use App\Models\DataPenilaian;
+use App\Models\DataSubKriteria;
 use Illuminate\Http\Request;
 
 class DataKriteriaController extends Controller
 {
     public function index()
     {
-        $data = DataKriteria::paginate(10);
+        $data = DataKriteria::orderByDesc('id')->paginate(10);
         return view('data-kriteria/index', ['dataKriteria' => $data]);
     }
 
@@ -46,6 +48,18 @@ class DataKriteriaController extends Controller
 
     public function delete($id)
     {
+        $dataPenilaian = DataPenilaian::where('id_kriteria', $id)->first();
+
+        if ($dataPenilaian) {
+            return back()->withErrors(['kombinasi' => 'Data Kriteria Digunakan Dalam Tabel Penilaian. Hapus Data Pada Tabel Penilaian Terlebih Dahulu'])->withInput();
+        }
+
+        $dataSub = DataSubKriteria::where('id_kriteria', $id)->first();
+
+        if ($dataSub) {
+            return back()->withErrors(['kombinasi' => 'Data Kriteria Digunakan Dalam Tabel Sub Kriteria. Hapus Data Pada Tabel Kriteria Terlebih Dahulu'])->withInput();
+        }
+
         $dataKriteria = DataKriteria::findOrFail($id);
         $dataKriteria->delete();
 
