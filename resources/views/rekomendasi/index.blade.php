@@ -15,111 +15,45 @@
     </ul>
 @endsection
 @section('content')
-    <section id="motor-listrik" class="container-fluid xl:container xl:mx-auto my-4 bg-white rounded-lg">
-        <div class="p-6 container-fluid">
-            <div class="flex justify-between">
-                <h1 class="font-bold text-2xl ">Rekomendasi Motor Listrik Pertama</h1>
-            </div>
-            <div class="container-fluid my-4">
-                <div class="flex justify-around flex-col sm:flex-row md:gap-5">
-                    <img src="{{ asset('storage/images/' . $rekomendasi[0]->alternatif->gambar) }}" alt="motor listrik"
-                        class="img-thumbnail md:w-[40%] lg:max-w-[400px] h-auto">
-                    <div class="w-full md:w-1/2">
-                        <h2 class="font-bold text-2xl my-2">{{ $rekomendasi[0]->alternatif->nama }}</h2>
-                        <div class="flex flex-wrap justify-between align-items-center">
-                            <table class="table table-zebra">
-                                <tr>
-                                    <th class="md:text-[16px] lg:text-[18px]">
-                                        Skor</th>
-                                    <td class="md:text-[16px] lg:text-[18px]">
-                                        {{ $score[$rekomendasi[0]->alternatif->nama] }}</td>
-                                </tr>
-                                @foreach ($rekomendasi as $item)
+    @foreach ($dataRekomendasi as $index => $alternatif)
+        <section id="motor-listrik" class="container-fluid xl:container xl:mx-auto my-4 bg-white rounded-lg">
+            <div class="p-6 container-fluid">
+                <div class="flex justify-between">
+                    <h1 class="font-bold text-2xl">Rekomendasi Motor Listrik Ke-{{ $index + 1 }}</h1>
+                </div>
+                <div class="container-fluid my-4">
+                    <div class="flex justify-around flex-col md:flex-row md:gap-5">
+                        <img src="{{ asset('storage/images/' . $alternatif[0]->alternatif->gambar) }}" alt="motor listrik"
+                            class="img-thumbnail md:w-[40%] lg:max-w-[400px] h-auto">
+                        <div class="w-full md:w-1/2">
+                            <h2 class="font-bold text-2xl my-2">{{ $alternatif[0]->alternatif->nama }}</h2>
+                            <div class="flex flex-wrap justify-between align-items-center">
+                                <table class="table table-zebra">
                                     <tr>
-                                        <th class="md:text-[16px] lg:text-[18px]">
-                                            {{ str_replace('_', ' ', $item->kriteria->nama) }}</th>
-                                        <td class="md:text-[16px] lg:text-[18px]">
-                                            {{ number_format($item->nilai, 0, ',', '.') }}
-                                            {{ $item->kriteria->satuan }}</td>
+                                        <th class="md:text-[16px] lg:text-[18px] p-2 md:p-4">
+                                            Skor</th>
+                                        <td class="md:text-[16px] lg:text-[18px] p-2 md:p-4">
+                                            {{ $score[$index]['total'] }}</td>
                                     </tr>
-                                @endforeach
-                            </table>
+                                    @foreach ($alternatif as $item)
+                                        <tr>
+                                            <th class="md:text-[16px] lg:text-[18px] p-2 md:p-4">
+                                                {{ str_replace('_', ' ', $item->kriteria->nama) }}</th>
+                                            <td class="md:text-[16px] lg:text-[18px] p-2 md:p-4">
+                                                {{ number_format($item->nilai, 0, ',', '.') }}
+                                                {{ $item->kriteria->satuan }}</td>
+                                        </tr>
+                                    @endforeach
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="motor-listrik" class="container-fluid xl:container xl:mx-auto my-4 bg-white rounded-lg">
-        <div class="p-6 container-fluid">
-            <div class="flex justify-between">
-                <h1 class="font-bold text-2xl">Rekomendasi Motor Listrik Kedua</h1>
-            </div>
-            <div class="container-fluid my-4">
-                <div class="flex justify-around flex-col sm:flex-row md:gap-5">
-                    <img src="{{ asset('storage/images/' . $alternatif1[0]->alternatif->gambar) }}" alt="motor listrik"
-                        class="img-thumbnail md:w-[40%] lg:max-w-[400px] h-auto">
-                    <div class="w-full md:w-1/2">
-                        <h2 class="font-bold text-2xl my-2">{{ $alternatif1[0]->alternatif->nama }}</h2>
-                        <div class="flex flex-wrap justify-between align-items-center">
-                            <table class="table table-zebra">
-                                <tr>
-                                    <th class="md:text-[16px] lg:text-[18px]">
-                                        Skor</th>
-                                    <td class="md:text-[16px] lg:text-[18px]">
-                                        {{ $score[$alternatif1[0]->alternatif->nama] }}</td>
-                                </tr>
-                                @foreach ($alternatif1 as $item)
-                                    <tr>
-                                        <th class="md:text-[16px] lg:text-[18px]">
-                                            {{ str_replace('_', ' ', $item->kriteria->nama) }}</th>
-                                        <td class="md:text-[16px] lg:text-[18px]">
-                                            {{ number_format($item->nilai, 0, ',', '.') }}
-                                            {{ $item->kriteria->satuan }}</td>
-                                    </tr>
-                                @endforeach
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="motor-listrik" class="container-fluid xl:container xl:mx-auto my-4 bg-white rounded-lg">
-        <div class="p-6 container-fluid">
-            <div class="flex justify-between">
-                <h1 class="font-bold text-2xl">Rekomendasi Motor Listrik Ketiga</h1>
-            </div>
-            <div class="container-fluid my-4">
-                <div class="flex justify-around flex-col sm:flex-row md:gap-5">
-                    <img src="{{ asset('storage/images/' . $alternatif2[0]->alternatif->gambar) }}" alt="motor listrik"
-                        class="img-thumbnail md:w-[40%] lg:max-w-[400px] h-auto">
-                    <div class="w-full md:w-1/2">
-                        <h2 class="font-bold text-2xl my-2">{{ $alternatif2[0]->alternatif->nama }}</h2>
-                        <div class="flex flex-wrap justify-between align-items-center">
-                            <table class="table table-zebra">
-                                <tr>
-                                    <th class="md:text-[16px] lg:text-[18px]">
-                                        Skor</th>
-                                    <td class="md:text-[16px] lg:text-[18px]">
-                                        {{ $score[$alternatif2[0]->alternatif->nama] }}</td>
-                                </tr>
-                                @foreach ($alternatif2 as $item)
-                                    <tr>
-                                        <th class="md:text-[16px] lg:text-[18px]">
-                                            {{ str_replace('_', ' ', $item->kriteria->nama) }}</th>
-                                        <td class="md:text-[16px] lg:text-[18px]">
-                                            {{ number_format($item->nilai, 0, ',', '.') }}
-                                            {{ $item->kriteria->satuan }}</td>
-                                    </tr>
-                                @endforeach
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    @endforeach
+    <a href="{{ route('index-page') }}"
+        class="btn bg-[#436850] border-[#436850] text-white lg:text-[16px] hover:border-[#436850] hover:text-[#436850] hover:font-bold hover:bg-white bottom-[5%] right-[5%] fixed"><i
+            class="fa-solid fa-arrow-left"></i> Kembali</a>
 @endsection

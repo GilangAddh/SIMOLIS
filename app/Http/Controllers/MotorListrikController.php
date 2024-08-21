@@ -43,15 +43,13 @@ class MotorListrikController extends Controller
             unset($nilaiKriteria['_method']);
         }
 
-        //cek array
-        //print_r($nilaiKriteria);
-
         //hitung total bobot
         $total = array_sum($nilaiKriteria);
 
         //ambil key dari array nilai kriteria
         $kriteria_post = array_keys($nilaiKriteria);
 
+        //ambil data tabel penilaian yang dinormalisasi
         $results = DB::table('data_penilaian')
             ->select(
                 'data_penilaian.id',
@@ -78,10 +76,6 @@ class MotorListrikController extends Controller
                 'max_values.id_kriteria'
             )
             ->get();
-
-
-        // tes hasil result
-        //print_r($results[2]);
 
         for ($i = 0; $i < count($results); $i++) {
             for ($j = 0; $j < count($kriteria_post); $j++) {
@@ -119,37 +113,24 @@ class MotorListrikController extends Controller
         // Konversi kembali ke koleksi
         $sorted = collect($arrayForSorting);
 
+        $rekomendasi = [];
 
-
-        $rekomendasi = $sorted->first();
-        $alternatif1 = $sorted->skip(1)->first();
-        $alternatif2 = $sorted->skip(2)->first();
-
-        $score = [];
-
-        for ($i = 0; $i <= 2; $i++) {
-            if (isset($sorted[$i])) {
-                $nama_alternatif = $sorted[$i]['nama_alternatif'];
-                $score[$nama_alternatif] = $sorted[$i]['total'];
+        for ($i = 0; $i < 5; $i++) {
+            if (isset($sorted[$i]['id_alternatif'])) {
+                $rekomendasi[] = $this->getDataRekom($sorted[$i]['id_alternatif']);
             }
         }
 
-        $dataRekom = $this->getDataRekom($rekomendasi['id_alternatif']);
-        $dataAlter1 = $this->getDataRekom($alternatif1['id_alternatif']);
-        $dataAlter2 = $this->getDataRekom($alternatif2['id_alternatif']);
-
-        // return response()->json($dataRekom);
+        // // return response()->json($dataRekom);
         return view('/rekomendasi/index', [
-            "rekomendasi" => $dataRekom,
-            "alternatif1" => $dataAlter1,
-            "alternatif2" => $dataAlter2,
-            "score" => $score
+            "score" => $sorted,
+            "dataRekomendasi" => $rekomendasi
         ]);
     }
 
     public function getDataRekom($id_alternatif)
     {
-        $data = DataPenilaian::where('id_alternatif', $id_alternatif)->get();
+        $data = DataPenilaian::where('id_alternatif', $id_alternatif)->orderby('id_kriteria')->get();
 
         return $data;
     }

@@ -28,8 +28,8 @@
                             <tr>
                                 <td>{{ $index + 1 }}</td>
                                 <td>{{ $item['nama'] }}</td>
-                                <td><img src="{{ asset('storage/images/' . $item['gambar']) }}"
-                                        alt="{{ $item['nama'] }}" class="w-[150px]">
+                                <td><img src="{{ asset('assets/molis/' . $item['gambar']) }}" alt="{{ $item['nama'] }}"
+                                        class="w-[150px]">
                                 </td>
                                 <td>
                                     <div class="flex gap-3">

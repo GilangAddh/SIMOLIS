@@ -11,7 +11,10 @@ class DataPenilaianController extends Controller
 {
     public function index()
     {
-        $dataAlternatif = DataAlternatif::orderByDesc('id')->with('penilaian')->paginate(5);
+        $dataAlternatif = DataAlternatif::with(['penilaian' => function ($query) {
+            $query->orderBy('id_kriteria');
+        }])->orderByDesc('id')->paginate(5);
+        //$dataAlternatif = DataAlternatif::orderByDesc('id')->with('penilaian')->paginate(5);
         $dataKriteria = DataKriteria::all();
         return view('data-penilaian/index', ['dataAlternatif' => $dataAlternatif, 'dataKriteria' => $dataKriteria]);
     }
@@ -42,8 +45,8 @@ class DataPenilaianController extends Controller
     {
         $validate = $request->validate([
             'id_kriteria' => 'required',
-            'nama' => 'required|min:3',
-            'bobot' => 'required|numeric'
+            'id_kriteria' => 'required',
+            'nilai' => 'required|numeric'
         ]);
 
         $dataPenilaian = DataPenilaian::findOrFail($id);

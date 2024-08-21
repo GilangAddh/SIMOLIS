@@ -19,7 +19,8 @@
         <div class="hero-content text-center text-neutral-content">
             <div class="max-w-md lg:max-w-2xl xl:max-w-4xl">
                 <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold">Ayo Beralih ke Motor Listrik</h1>
-                <p class="mb-5 sm:text-[18px] lg:text-[20px] xl:text-[22px]">Tingkatkan kualitas udara dan kurangi
+                <p class="mb-5 sm:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[26px]">Tingkatkan kualitas udara dan
+                    kurangi
                     ketergantungan pada
                     bahan bakar fosil
                     dengan beralih
@@ -37,110 +38,134 @@
         <div class="p-6">
             <h1 class="font-bold text-2xl">Apa Saja Spesifikasi Motor Listrik?</h1>
             <div class="p-4 bg-base-200 rounded-xl my-3">
-                <div class="md:p-2 md:flex items-top 2xl:justify-around">
-                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4">
-                        <h2 class="text-xl font-bold">Harga</h2>
-                        <ul class="pl-5 xl:text-[18px] list-disc">
-                            <li><strong>Sangat Mahal</strong>: Harga lebih dari 26 juta.</li>
-                            <li><strong>Mahal</strong>: Harga antara 22 juta hingga 26 juta.</li>
-                            <li><strong>Sedang</strong>: Harga antara 18 juta hingga 22 juta.</li>
-                            <li><strong>Murah</strong>: Harga antara 14 juta hingga 18 juta.</li>
-                            <li><strong>Sangat Murah</strong>: Harga kurang dari 14 juta.</li>
-                            <li><strong>Tidak dipilih</strong>: Harga tidak menjadi faktor pertimbangan dalam pemilihan
-                                motor.</li>
-                        </ul>
+                <div class="md:p-2 md:flex items-top 2xl:justify-around gap-6 items-start">
+                    <div tabindex="0"
+                        class="collapse collapse-arrow my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4 border-2 border-slate-400">
+                        <div class="collapse-title text-xl font-medium">Harga</div>
+                        <div class="collapse-content">
+                            <ul class="pl-5 xl:text-[18px] list-disc">
+                                <li><strong>Sangat Mahal</strong>: Harga lebih dari 26 juta.</li>
+                                <li><strong>Mahal</strong>: Harga antara 22 juta hingga 26 juta.</li>
+                                <li><strong>Sedang</strong>: Harga antara 18 juta hingga 22 juta.</li>
+                                <li><strong>Murah</strong>: Harga antara 14 juta hingga 18 juta.</li>
+                                <li><strong>Sangat Murah</strong>: Harga kurang dari 14 juta.</li>
+                                <li><strong>Tidak dipilih</strong>: Harga tidak menjadi faktor pertimbangan dalam pemilihan
+                                    motor.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px]  px-4">
-                        <h2 class="text-xl font-bold">Kecepatan Maksimal</h2>
-                        <ul class="pl-5 xl:text-[18px] list-disc">
-                            <li><strong>Sangat Cepat</strong>: Kecepatan maksimal lebih dari 80 km/h.</li>
-                            <li><strong>Cepat</strong>: Kecepatan antara 80 km/h sampai 65 km/h.</li>
-                            <li><strong>Sedang</strong>: Kecepatan antara 65 km/h sampai 50 km/h.</li>
-                            <li><strong>Pelan</strong>: Kecepatan antara 50 km/h sampai 40 km/h.</li>
-                            <li><strong>Tidak Dipilih</strong>: Kecepatan maksimal tidak menjadi faktor pertimbangan dalam
-                                pemilihan.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="md:p-2 md:flex items-top 2xl:justify-around">
-                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px]  px-4">
-                        <h2 class="text-xl font-bold">Jarak Tempuh</h2>
-                        <ul class="pl-5 xl:text-[18px] list-disc">
-                            <li><strong>Sangat Jauh</strong>:Jarak tempuh lebih dari 100 km.
-                            </li>
-                            <li><strong>Jauh</strong>: Jarak tempuh antara 80 km sampai 100 km.</li>
-                            <li><strong>Sedang</strong>: Jarak tempuh antara 60 km sampai 80 km.</li>
-                            <li><strong>Dekat</strong>: Jarak tempuh di bawah 60 km.</li>
-                            <li><strong>Tidak Dipilih</strong>: Jarak tempuh tidak menjadi faktor pertimbangan dalam
-                                pemilihan.</li>
-                        </ul>
-
-                    </div>
-                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px]  px-4">
-                        <h2 class="text-xl font-bold">Daya Dinamo</h2>
-                        <ul class="pl-5 xl:text-[18px] list-disc">
-                            <li><strong>Sangat Besar</strong>: Daya lebih dari 2500 watt.</li>
-                            <li><strong>Besar</strong>: Daya antara 2000 hingga 2500 watt.</li>
-                            <li><strong>Sedang</strong>: Daya antara 1500 hingga 2000 watt.</li>
-                            <li><strong>Kecil</strong>: Daya antara 1000 hingga 1500 watt.</li>
-                            <li><strong>Sangat Kecil</strong>: Daya kurang dari 1000 watt.</li>
-                            <li><strong>Tidak Dipilih</strong>: Daya dinamo tidak menjadi faktor pertimbangan dalam
-                                pemilihan.</li>
-                        </ul>
-
+                    <div tabindex="0"
+                        class="collapse collapse-arrow my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4 border-2 border-slate-400">
+                        <div class="collapse-title text-xl font-medium">Kecepatan Maksimal</div>
+                        <div class="collapse-content">
+                            <ul class="pl-5 xl:text-[18px] list-disc">
+                                <li><strong>Sangat Cepat</strong>: Kecepatan maksimal lebih dari 90 km/h.</li>
+                                <li><strong>Cepat</strong>: Kecepatan antara 90 km/h sampai 75 km/h.</li>
+                                <li><strong>Sedang</strong>: Kecepatan antara 75 km/h sampai 60 km/h.</li>
+                                <li><strong>Pelan</strong>: Kecepatan antara 60 km/h sampai 45 km/h.</li>
+                                <li><strong>Sangat Pelan</strong>: Kecepatan kurang dari 45km/h.</li>
+                                <li><strong>Tidak Dipilih</strong>: Kecepatan maksimal tidak menjadi faktor pertimbangan
+                                    dalam
+                                    pemilihan.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="md:p-2 md:flex items-top 2xl:justify-around">
-                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4">
-                        <h2 class="text-xl font-bold">Kapasitas Baterai</h2>
-                        <p class="text-justify xl:text-[18px]">
-                        <ul class="pl-5 xl:text-[18px] list-disc">
-                            <li><strong>Sangat Besar</strong>: Kapasitas lebih dari 2000 watt/jam (Wh).</li>
-                            <li><strong>Besar</strong>: Kapasitas antara 1500 hingga 2000 watt/jam (Wh).</li>
-                            <li><strong>Sedang</strong>: Kapasitas antara 1000 hingga 1500 watt/jam (Wh).</li>
-                            <li><strong>Kecil</strong>: Kapasitas antara 500 hingga 1000 watt/jam (Wh).</li>
-                            <li><strong>Sangat Kecil</strong>: Kapasitas kurang dari 500 watt/jam (Wh).</li>
-                            <li><strong>Tidak Dipilih</strong>: Kapasitas baterai tidak menjadi pertimbangan dalam
-                                pemilihan.</li>
-                        </ul>
-                        </p>
+                <div class="md:p-2 md:flex items-top 2xl:justify-around gap-6 items-start">
+                    <div tabindex="0"
+                        class="collapse collapse-arrow my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4 border-2 border-slate-400">
+                        <div class="collapse-title text-xl font-medium">Jarak Tempuh</div>
+                        <div class="collapse-content">
+                            <ul class="pl-5 xl:text-[18px] list-disc">
+                                <li><strong>Sangat Jauh</strong>: Jarak tempuh lebih dari 110 km.
+                                </li>
+                                <li><strong>Jauh</strong>: Jarak tempuh antara 90 km sampai 110 km.</li>
+                                <li><strong>Sedang</strong>: Jarak tempuh antara 70 km sampai 90 km.</li>
+                                <li><strong>Dekat</strong>: Jarak tempuh antara 50 km sampai 70 km.</li>
+                                <li><strong>Sangat Dekat</strong>: Jarak tempuh kurang dari 50 km.</li>
+                                <li><strong>Tidak Dipilih</strong>: Jarak tempuh tidak menjadi faktor pertimbangan dalam
+                                    pemilihan.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4">
-                        <h2 class="text-xl font-bold">Lama Waktu Pengisian</h2>
-                        <ul class="pl-5 xl:text-[18px] list-disc">
-                            <li><strong>Sangat Cepat</strong>: Waktu pengisian kurang dari 1 jam.</li>
-                            <li><strong>Cepat</strong>: Waktu pengisian antara 1 hingga 2 jam.</li>
-                            <li><strong>Sedang</strong>: Waktu pengisian antara 2 hingga 4 jam.</li>
-                            <li><strong>Lambat</strong>: Waktu pengisian antara 4 hingga 6 jam.</li>
-                            <li><strong>Sangat Lambat</strong>: Waktu pengisian lebih dari 6 jam.</li>
-                            <li><strong>Tidak Dipilih</strong>: Lama pengisian tidak menjadi pertimbangan dalam pemilihan.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="md:p-2 md:flex items-top 2xl:justify-around">
-                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px]  px-4">
-                        <h2 class="text-xl font-bold">Daya Angkut</h2>
-                        <ul class="pl-5 xl:text-[18px] list-disc">
-                            <li><strong>Sangat Besar</strong>: Daya angkut lebih dari 200 kg.</li>
-                            <li><strong>Besar</strong>: Daya angkut antara 150 hingga 200 kg.</li>
-                            <li><strong>Sedang</strong>: Daya angkut antara 100 hingga 150 kg.</li>
-                            <li><strong>Kecil</strong>: Daya angkut di bawah 100 kg.</li>
-                            <li><strong>Tidak Dipilih</strong>: Daya angkut tidak menjadi pertimbangan dalam pemilihan.</li>
-                        </ul>
-
-                    </div>
-                    <div class="my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4">
-                        <h2 class="text-xl font-bold">Garansi Baterai</h2>
-                        <ul class="pl-5 xl:text-[18px] list-disc">
-                            <li><strong>Jangka Pendek</strong>: Garansi kurang dari 6 bulan.</li>
-                            <li><strong>Standar</strong>: Garansi antara 6 bulan sampai 12 bulan.</li>
-                            <li><strong>Jangka Panjang</strong>: Garansi lebih dari 12 bulan.</li>
-                            <li><strong>Tidak Dipilih</strong>: Garansi tidak menjadi pertimbangan dalam pemilihan.</li>
-                        </ul>
-
+                    <div tabindex="0"
+                        class="collapse collapse-arrow my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4 border-2 border-slate-400">
+                        <div class="collapse-title text-xl font-medium">Daya Dinamo</div>
+                        <div class="collapse-content">
+                            <ul class="pl-5 xl:text-[18px] list-disc">
+                                <li><strong>Sangat Besar</strong>: Daya lebih dari 2500 watt.</li>
+                                <li><strong>Besar</strong>: Daya antara 2000 hingga 2500 watt.</li>
+                                <li><strong>Sedang</strong>: Daya antara 1500 hingga 2000 watt.</li>
+                                <li><strong>Kecil</strong>: Daya antara 1000 hingga 1500 watt.</li>
+                                <li><strong>Sangat Kecil</strong>: Daya kurang dari 1000 watt.</li>
+                                <li><strong>Tidak Dipilih</strong>: Daya dinamo tidak menjadi faktor pertimbangan dalam
+                                    pemilihan.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                <div class="md:p-2 md:flex items-top 2xl:justify-around gap-6 items-start">
+                    <div tabindex="0"
+                        class="collapse collapse-arrow my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4 border-2 border-slate-400">
+                        <div class="collapse-title text-xl font-medium">Kapasitas Baterai</div>
+                        <div class="collapse-content">
+                            <ul class="pl-5 xl:text-[18px] list-disc">
+                                <li><strong>Sangat Besar</strong>: Kapasitas lebih dari 2500 watt/jam (Wh).</li>
+                                <li><strong>Besar</strong>: Kapasitas antara 2000 hingga 2500 watt/jam (Wh).</li>
+                                <li><strong>Sedang</strong>: Kapasitas antara 1500 hingga 2000 watt/jam (Wh).</li>
+                                <li><strong>Kecil</strong>: Kapasitas antara 1000 hingga 1500 watt/jam (Wh).</li>
+                                <li><strong>Sangat Kecil</strong>: Kapasitas kurang dari 1000 watt/jam (Wh).</li>
+                                <li><strong>Tidak Dipilih</strong>: Kapasitas baterai tidak menjadi pertimbangan dalam
+                                    pemilihan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div tabindex="0"
+                        class="collapse collapse-arrow my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4 border-2 border-slate-400">
+                        <div class="collapse-title text-xl font-medium">Daya Angkut</div>
+                        <div class="collapse-content">
+                            <ul class="pl-5 xl:text-[18px] list-disc">
+                                <li><strong>Berat</strong>: Daya angkut lebih dari 200 kg.</li>
+                                <li><strong>Sedang</strong>: Daya angkut antara 150 hingga 200 kg.</li>
+                                <li><strong>Ringan</strong>: Daya angkut di bawah 150 kg.</li>
+                                <li><strong>Tidak Dipilih</strong>: Daya angkut tidak menjadi pertimbangan dalam pemilihan.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="md:p-2 md:flex items-top 2xl:justify-around gap-6 items-start">
+                    <div tabindex="0"
+                        class="collapse collapse-arrow my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4 border-2 border-slate-400">
+                        <div class="collapse-title text-xl font-medium">Lama Waktu Pengisian</div>
+                        <div class="collapse-content">
+                            <ul class="pl-5 xl:text-[18px] list-disc">
+                                <li><strong>Sangat Cepat</strong>: Waktu pengisian kurang dari 1 jam.</li>
+                                <li><strong>Cepat</strong>: Waktu pengisian antara 1 hingga 2 jam.</li>
+                                <li><strong>Sedang</strong>: Waktu pengisian antara 2 hingga 4 jam.</li>
+                                <li><strong>Lambat</strong>: Waktu pengisian antara 4 hingga 6 jam.</li>
+                                <li><strong>Sangat Lambat</strong>: Waktu pengisian lebih dari 6 jam.</li>
+                                <li><strong>Tidak Dipilih</strong>: Lama pengisian tidak menjadi pertimbangan dalam
+                                    pemilihan.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div tabindex="0"
+                        class="collapse collapse-arrow my-4 md:my2 md:max-w-[50%] 2xl:w-[700px] px-4 border-2 border-slate-400">
+                        <div class="collapse-title text-xl font-medium">Garansi Baterai</div>
+                        <div class="collapse-content">
+                            <ul class="pl-5 xl:text-[18px] list-disc">
+                                <li><strong>Jangka Pendek</strong>: Garansi kurang dari 6 bulan.</li>
+                                <li><strong>Sedang</strong>: Garansi antara 6 bulan sampai 12 bulan.</li>
+                                <li><strong>Jangka Panjang</strong>: Garansi lebih dari 12 bulan.</li>
+                                <li><strong>Tidak Dipilih</strong>: Garansi tidak menjadi pertimbangan dalam pemilihan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -193,8 +218,9 @@
             <div class="p-4 bg-base-200 rounded-xl my-3 flex flex-wrap justify-center gap-4">
                 @foreach ($sample as $no => $item)
                     <div class="card w-80 glass">
-                        <figure class="h-3/5"><img src="{{ asset('storage/images/' . $item[0]['alternatif']['gambar']) }}"
-                                alt="" class="max-h-[250px] w-full sm:max-h-[300px] " />
+                        <figure class="h-3/5"><img
+                                src="{{ asset('storage/images/' . $item[0]['alternatif']['gambar']) }}" alt=""
+                                class="max-h-[250px] w-full sm:max-h-[300px] " />
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title">{{ $item[0]['alternatif']['nama'] }}</h2>
