@@ -30,6 +30,6 @@
         "DB_PORT": "3307",
         "DB_DATABASE": "mydb_barshoreby",
         "DB_USERNAME": "mydb_barshoreby",
-        "DB_PASSWORD": "7d43ee1d0c5bb0e1b2d5d3b74012b44dad441bbf",
+        "DB_PASSWORD": "7d43ee1d0c5bb0e1b2d5d3b74012b44dad441bbf"
     }
 }
