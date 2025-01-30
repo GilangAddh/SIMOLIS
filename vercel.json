@@ -27,11 +27,11 @@
       "LOG_CHANNEL": "stderr",
       "SESSION_DRIVER": "cookie",
       "DB_CONNECTION": "mysql",
-      "DB_HOST": "iked3.h.filess.io",
-      "DB_PORT": "3306",
-      "DB_DATABASE": "newdb_containare",
-      "DB_USERNAME": "newdb_containare",
-      "DB_PASSWORD": "fd553901573921afde79a2044b8a29a240392787"
+      "DB_HOST": "w4ysd.h.filess.io",
+      "DB_PORT": "3307",
+      "DB_DATABASE": "mydb_barshoreby",
+      "DB_USERNAME": "mydb_barshoreby",
+      "DB_PASSWORD": "7d43ee1d0c5bb0e1b2d5d3b74012b44dad441bbf"
     }
 }
   
