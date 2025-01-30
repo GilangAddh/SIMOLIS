@@ -2,7 +2,14 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": {
+        "runtime": "vercel-php@0.6.0",
+        "runtimeConfig": {
+            "php.ini": {
+                "extension": "-pgsql"
+            }
+        }
+    }
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
